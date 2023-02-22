@@ -1,10 +1,7 @@
 module.exports = {
-  "stories": process.env.MJML ? [
-    "../**/*.stories-mjml.mdx",
-    "../**/*.stories-mjml.@(ts|tsx)"
-  ] : [
-    "../**/*.stories-plain.mdx",
-    "../**/*.stories-plain.@(ts|tsx)"
+  "stories": [
+    "../**/*.stories.mdx",
+    "../**/*.stories.(ts|tsx)"
   ],
   "addons": [
     "@storybook/addon-links",
@@ -20,5 +17,8 @@ module.exports = {
       shouldExtractLiteralValuesFromEnum: true,
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
     },
+  },
+  core: {
+    builder: "webpack5",
   },
 }

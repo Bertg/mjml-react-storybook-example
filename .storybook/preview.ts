@@ -1,3 +1,5 @@
+import { emailPreview } from './decorators/emailPreview'
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -7,3 +9,7 @@ export const parameters = {
     },
   },
 }
+
+export const decorators = [
+  emailPreview
+]

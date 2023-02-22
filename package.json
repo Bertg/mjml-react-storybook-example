@@ -5,7 +5,9 @@
   "license": "MIT",
   "dependencies": {
     "@faire/mjml-react": "^3.1.1",
+    "@storybook/manager-webpack5": "^6.5.16",
     "mjml": "^4.13.0",
+    "mjml-browser": "^4.13.0",
     "nodemon": "^2.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -16,8 +18,7 @@
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
-    "@storybook/builder-webpack4": "^6.5.16",
-    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
     "@types/mjml": "^4.7.0",
@@ -28,8 +29,7 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
-    "storybook-plain": "start-storybook -p 6006",
-    "storybook-mjml": "MJML=1 start-storybook -p 6006",
-    "email-poc": "ts-node worker.tsx"
+    "storybook": "start-storybook -p 6006",
+    "worker": "ts-node worker.tsx"
   }
 }
